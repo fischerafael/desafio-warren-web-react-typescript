@@ -8,11 +8,11 @@ import { HiSearch } from "react-icons/hi";
 
 interface Props extends InputProps {}
 
-export const TextInput = ({ ...props }: Props) => {
+export const TextInput = ({ value, onChange }: Props) => {
   return (
     <InputGroup w="full">
       <InputLeftElement color="gray.400" children={<HiSearch />} />
-      <Input {...props} />
+      <Input value={value} onChange={onChange} />
     </InputGroup>
   );
 };
