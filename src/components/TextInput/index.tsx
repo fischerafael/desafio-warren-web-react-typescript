@@ -6,7 +6,10 @@ import {
 } from "@chakra-ui/react";
 import { HiSearch } from "react-icons/hi";
 
-interface Props extends InputProps {}
+interface Props {
+  value: string;
+  onChange: (e: any) => void;
+}
 
 export const TextInput = ({ value, onChange }: Props) => {
   return (
